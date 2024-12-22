@@ -1,0 +1,324 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #54396F;
+    background-color: #FBECD0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes full height */
+}
+
+/* Header Styles */
+header {
+    background-color: #FBECD0;
+    padding: 10px 20px; /* Reduced top and bottom padding */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 5px 0;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #54396F;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #54396F;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+header img.logo {
+    width: 500px; /* Increase logo size */
+    margin: 20px auto 10px; /* Adjust spacing */
+    display: block;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1; /* Allows main content to expand and push footer to bottom */
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.hero p.tagline {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto 0;
+}
+
+/* Social Media Section */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-media i {
+    font-size: 25px;
+    color: #54396F;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media i:hover {
+    color: #54396F;
+    transform: scale(1.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #FBECD0;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Podcast Page */
+
+/* Podcast Container */
+.podcast-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 2rem; /* Space between items */
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+
+/* Podcast Items */
+.podcast-item {
+    position: relative; /* Allows positioning for audio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.podcast-cover {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.podcast-item:hover .podcast-cover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.podcast-player {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.podcast-item:hover .podcast-player {
+    opacity: 1; /* Show the audio player on hover */
+    transform: translateX(-50%) translateY(-10px); /* Lift up slightly */
+}
+
+/* Audio Player Styling */
+.podcast-player audio {
+    width: 100%;
+    border: none; /* Removes any borders */
+    outline: none;
+    background: transparent; /* Transparent player */
+}
+
+/* Webkit-specific player control adjustments */
+audio::-webkit-media-controls-panel {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border-radius: 8px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider-container {
+    opacity: 1; /* Ensures visibility */
+    display: block;
+}
+
+audio::-webkit-media-controls-timeline {
+    background: none;
+}
+
+audio:hover::-webkit-media-controls-panel {
+    background: rgba(0, 0, 0, 0.1); /* Hover effect for better visibility */
+    transition: background 0.3s ease;
+}
+
+/* Reset Audio Player Margins */
+.podcast-player {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+/* BLOG PAGE */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBECD0;
+    color: #54396F;
+}
+
+header h1, .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    color: #54396F;
+}
+
+/* Recent Posts Section */
+.recent-posts {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main post larger */
+    gap: 20px;
+}
+
+/* Main Post Styling */
+.main-post {
+    grid-column: span 2; /* Takes full width */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-post img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.main-post img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-details {
+    padding: 15px;
+}
+
+.category {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.post-title {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.post-summary {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Main Post 2 Styling (No Hover Effect) */
+.main-post2 {
+    grid-column: span 2; /* Takes full width */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-post2 img {
+    transition: none; /* Remove transition */
+}
+
+.main-post2 img:hover {
+    transform: none; /* Disable hover effect */
+}
+
+/* Smaller Posts */
+.small-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-post .post-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.small-post img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.small-post img:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #FBECD0;
+}
+
+.all-posts-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #54396F; /* Your theme color */
+    color: #FBECD0; /* Light text */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #412D50; /* Slightly darker color on hover */
+}

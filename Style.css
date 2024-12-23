@@ -100,7 +100,7 @@ footer p {
     margin: 0;
 }
 
-/* Podcast Page */
+/* Podcast Page (Square Covers) */
 
 /* Podcast Container */
 .podcast-container {
@@ -120,11 +120,12 @@ footer p {
     overflow: hidden;
 }
 
+/* Default Podcast Cover (Square) */
 .podcast-cover {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px; /* Slightly rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Smooth hover effect */
 }
@@ -186,7 +187,6 @@ audio:hover::-webkit-media-controls-panel {
     margin-bottom: 0;
     padding: 0;
 }
-
 
 /* BLOG PAGE */
 
@@ -321,4 +321,32 @@ footer {
 
 .button:hover {
     background-color: #412D50; /* Slightly darker color on hover */
+}
+
+/* Music Page (Circular Covers) */
+
+.circular-cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid #333; /* Outer record ring */
+    background: radial-gradient(circle, #000 70%, transparent 72%); /* Simulates a record hole */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    object-fit: cover; /* Maintain aspect ratio */
+    animation: none; /* No spin by default */
+    transition: transform 0.3s ease; /* Smooth zoom on hover */
+}
+
+.circular-cover.spin {
+    animation: spin 5s linear infinite;
+}
+
+/* Keyframes for Spinning */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

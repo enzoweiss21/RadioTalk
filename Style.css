@@ -350,3 +350,30 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+
+
+
+/* host about */ 
+
+/* Cool Image Styling for Host Class */
+/* Cool Square Image Style */
+.host img {
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Keep square dimensions */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.host img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+/* Optional: Align content in the host div */
+.host {
+    text-align: center;
+    margin-bottom: 20px;
+}
